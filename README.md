@@ -17,4 +17,5 @@ existing server-side code (REST API and database).
 # Installations:
 * npm install -g parcel
 * npm install --save react react-dom
+* npm install react-bootstrap bootstrap
 
