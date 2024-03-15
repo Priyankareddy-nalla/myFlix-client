@@ -1,10 +1,16 @@
-$color: steelblue;
 
-.my-flix {
-    color: $color;
-}
+$primary: rgba(12, 11, 12, 0.4);
+$body-bg: #0d0c0c;
+$body-color: white;
+$secondary: rgb(223, 27, 187);
 
-button{
-    color: blue;
+@import '~bootstrap/scss/bootstrap.scss';
 
-}  
+  .no-padding-margin {
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+
+

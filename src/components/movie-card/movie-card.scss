@@ -1,0 +1,16 @@
+.card-img {
+    display: block;
+    width: 150px;
+    height: 400px;
+    object-fit: fill;
+}
+
+.fav-button {
+    cursor: pointer;
+    transition: 0.4s linear;
+    position: absolute;
+}
+
+.fav-button:hover {
+    transform: scale(1.4);
+}
