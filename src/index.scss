@@ -1,10 +1,21 @@
+
+
+$primary: blue;
+$body-bg: white;
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+
+
+
+
+
 $color: steelblue;
 
 .my-flix {
-    color: $color;
+  color: $color;
 }
 
-button{
-    color: blue;
-
-}  
+// button{
+//   color: blue;
+// }
