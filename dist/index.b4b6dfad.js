@@ -2978,7 +2978,11 @@ $RefreshReg$(_c, "MyFlixApplication");
   window.$RefreshSig$ = prevRefreshSig;
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 },{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./components/main-view/main-view":"4gflv","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"kXUPb"}],"iTorj":[function(require,module,exports) {
+=======
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./components/main-view/main-view":"4gflv","react-bootstrap":"3AD9A","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+>>>>>>> Stashed changes
 =======
 },{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./components/main-view/main-view":"4gflv","react-bootstrap":"3AD9A","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 >>>>>>> Stashed changes
@@ -27291,7 +27295,11 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshSig$ = prevRefreshSig;
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","@parcel/transformer-js/src/esmodule-helpers.js":"bQiXZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"kXUPb"}],"bwuIu":[function(require,module,exports) {
+=======
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","../login-view/login-view.jsx":"9YtA0","../signup-view/signup-view.jsx":"4OGiN","../navigation-bar/navigation-bar.jsx":"bsPVM","../profile-view/profile-view.jsx":"2vVqf","./main-view.scss":"eBaMl","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bwuIu":[function(require,module,exports) {
+>>>>>>> Stashed changes
 =======
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","../login-view/login-view.jsx":"9YtA0","../signup-view/signup-view.jsx":"4OGiN","../navigation-bar/navigation-bar.jsx":"bsPVM","../profile-view/profile-view.jsx":"2vVqf","./main-view.scss":"eBaMl","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bwuIu":[function(require,module,exports) {
 >>>>>>> Stashed changes
@@ -27327,8 +27335,11 @@ $RefreshReg$(_c, "MovieCard");
   window.$RefreshSig$ = prevRefreshSig;
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 },{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"bQiXZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"kXUPb"}],"bQiXZ":[function(require,module,exports) {
 =======
+=======
+>>>>>>> Stashed changes
 },{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","./movie-card.scss":"d6HH4","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","react-bootstrap-icons":"c9Gza","../movie-view/movie-view.scss":"jnlR5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7wKI2":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -29421,6 +29432,9 @@ module.exports = require("c4c10cbba9862d5f");
 })();
 
 },{"593632ccebda0d3a":"21dqq"}],"gkKU3":[function(require,module,exports) {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
@@ -50637,6 +50651,9 @@ exports.default = Heart;
 },{"react":"21dqq","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jnlR5":[function() {},{}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 function debounce(func, delay) {
     {
@@ -50774,7 +50791,11 @@ function registerExportsForReactRefresh(module1) {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 },{"cd8e778f4842d4b7":"66gj8"}],"ggaUx":[function(require,module,exports) {
+=======
+},{"7422ead32dcc1e6b":"786KC"}],"ggaUx":[function(require,module,exports) {
+>>>>>>> Stashed changes
 =======
 },{"7422ead32dcc1e6b":"786KC"}],"ggaUx":[function(require,module,exports) {
 >>>>>>> Stashed changes
@@ -50940,8 +50961,11 @@ $RefreshReg$(_c, "MovieView");
   window.$RefreshSig$ = prevRefreshSig;
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 },{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"bQiXZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"kXUPb"}],"lJZlQ":[function() {},{}]},["2vi6m","jVLh5","d8Dch"], "d8Dch", "parcelRequireaec4")
 =======
+=======
+>>>>>>> Stashed changes
 },{"react/jsx-dev-runtime":"iTorj","react-router":"dbWyW","react-router-dom":"9xmpe","react-bootstrap":"3AD9A","../movie-card/movie-card":"bwuIu","./movie-view.scss":"jnlR5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jnlR5":[function() {},{}],"9YtA0":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9fee = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -51983,6 +52007,9 @@ $RefreshReg$(_c, "ProfileView");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","react-bootstrap":"3AD9A","../movie-card/movie-card":"bwuIu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eBaMl":[function() {},{}],"lJZlQ":[function() {},{}]},["5qIsR","1xC6H","d8Dch"], "d8Dch", "parcelRequireaec4")
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 //# sourceMappingURL=index.b4b6dfad.js.map
