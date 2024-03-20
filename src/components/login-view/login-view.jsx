@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Card, CardBody, CardGroup, Col, Container, Row } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import { Button }from "react-bootstrap";
 import { Form } from "react-bootstrap";
 
 export const LoginView = ({ onLoggedIn }) => {
@@ -32,6 +32,7 @@ export const LoginView = ({ onLoggedIn }) => {
                 } else {
                     alert("No such user");
                 }
+
             })
             .catch((e) => {
                 alert("Something went wrong");
@@ -57,7 +58,7 @@ export const LoginView = ({ onLoggedIn }) => {
                                             required
                                         /></Form.Group>
                                     <br></br>
-                                    <Button type="submit" variant="secondary" style={{ color: "white" }}>Login</Button>
+                                    <Button type="submit" variant="secondary" style={{ color: "white"}}>Login</Button>
                                 </Form>
                             </CardBody>
                         </Card>
