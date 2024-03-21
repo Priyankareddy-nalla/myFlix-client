@@ -85,7 +85,7 @@ export const SignupView = () => {
                                         <Form.Label> Birthday:</Form.Label>
 
                                         <Form.Control
-                                            type="date"style={{ backgroundColor: '#d3bad32e', color: 'white' }}
+                                            type="date" style={{ backgroundColor: '#d3bad32e', color: 'white' }}
                                             value={birthday}
                                             onChange={(e) => setBirthday(e.target.value)}
                                             required
