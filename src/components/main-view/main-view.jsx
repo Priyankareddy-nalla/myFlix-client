@@ -13,8 +13,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 export const MainView = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     const storedToken = localStorage.getItem("token");
-    const [user, setUser] = useState(storedUser? storedUser: null);
-    const [token, setToken] = useState(storedToken? storedToken: null);
+    const [user, setUser] = useState(storedUser ? storedUser : null);
+    const [token, setToken] = useState(storedToken ? storedToken : null);
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState("");
     const [selectedGenre, setSelectedGenre] = useState("");
@@ -26,7 +26,7 @@ export const MainView = () => {
         }
 
         fetch("https://myflix-app-deh4.onrender.com/movies", {
-            headers: { Authorization: `Bearer ${token}`}
+            headers: { Authorization: `Bearer ${token}` }
         })
             .then((response) => response.json())
             .then((data) => {
@@ -68,7 +68,6 @@ export const MainView = () => {
             if (user) {
                 localStorage.setItem('user', JSON.stringify(user));
                 setUser(user);
-                //setIsFavorite(true);
             }
         }).catch(error => {
             console.error('Error: ', error);
@@ -100,7 +99,7 @@ export const MainView = () => {
     };
 
     return (
-        
+
         <BrowserRouter>
             <NavigationBar
                 user={user}
@@ -111,28 +110,28 @@ export const MainView = () => {
                 }}
                 setSearch={setSearch}
                 setSelectedGenre={setSelectedGenre}
-              />
-              
+            />
+
 
             <Row className="justify-content-center my-5">
                 <Routes>
                     {/* if user logged in return Signup page  */}
                     <Route
-                    path="/signup"
-                    element={
-                        <>
-                            {user? (
-                                <Navigate to="/" />
-                            ) : (
-                                <Col md={5}>
-                                    <SignupView />
-                                </Col>
-                            )}
-                        </>
-                    }
+                        path="/signup"
+                        element={
+                            <>
+                                {user ? (
+                                    <Navigate to="/" />
+                                ) : (
+                                    <Col md={5}>
+                                        <SignupView />
+                                    </Col>
+                                )}
+                            </>
+                        }
                     />
 
-                    <Route 
+                    <Route
                         path="/login"
                         element={
                             <>
@@ -140,7 +139,7 @@ export const MainView = () => {
                                     <Navigate to="/" />
                                 ) : (
                                     <Col md={5}>
-                                        <LoginView 
+                                        <LoginView
                                             onLoggedIn={(user, token) => {
                                                 setUser(user);
                                                 setToken(token);
@@ -152,7 +151,7 @@ export const MainView = () => {
                         }
                     />
                     {/* userlogged in then display MovieView */}
-                    <Route 
+                    <Route
                         path="/movies/:MovieId"
 
                         element={
@@ -163,77 +162,72 @@ export const MainView = () => {
                                     <Col>There is no movie</Col>
                                 ) : (
                                     <Col md={12}>
-                                        <MovieView 
-                                        movies={movies}
-                                        removeFavmovie={removeFavmovie}
-                                        addFavmovie={addFavmovie}
+                                        <MovieView
+                                            movies={movies}
+                                            removeFavmovie={removeFavmovie}
+                                            addFavmovie={addFavmovie}
                                         />
                                     </Col>
                                 )}
                             </>
                         }
                     />
-
-
-
-
                     {/* display movicard for logged in users*/}
-                    <Route 
-                    path="/"
-                    element={
-                        <>
-                            {!user ? (
-                                <Navigate to="/login" replace />
-                            ) : movies.length === 0 ? (
-                                <Col>The list is empty</Col>
-                            ) : (
-                                <>
-                                
-                                    {movies.filter((movie) => {
-                                        return selectedGenre === ""
-                                        ? movie
-                                        : movie.Genre.Name === selectedGenre;
-                                    })
-                                    .filter((movie) => {
-                                        return search === ""
-                                        ? movie
-                                        : movie.Title.toLowerCase().includes(search.toLowerCase());
-                                    })
-                                    .map((movie, MovieId) => (
-                                        <Col md={6} lg={4} xl={3} className="mb-5 col-8" key={MovieId}>
-                                            <MovieCard
-                                            movie={movie} 
-                                            removeFavmovie={removeFavmovie} 
-                                            addFavmovie={addFavmovie} 
-                                            isFavorite={user.FavoriteMovies.includes(movie._id)} 
-                                            />
-                                        </Col>
-                                     ))} 
-                                </>
-                            )}
-                        </>
-                    }
+                    <Route
+                        path="/"
+                        element={
+                            <>
+                                {!user ? (
+                                    <Navigate to="/login" replace />
+                                ) : movies.length === 0 ? (
+                                    <Col>The list is empty</Col>
+                                ) : (
+                                    <>
+                                        {movies.filter((movie) => {
+                                            return selectedGenre === ""
+                                                ? movie
+                                                : movie.Genre.Name === selectedGenre;
+                                        })
+                                            .filter((movie) => {
+                                                return search === ""
+                                                    ? movie
+                                                    : movie.Title.toLowerCase().includes(search.toLowerCase());
+                                            })
+                                            .map((movie, MovieId) => (
+                                                <Col md={6} lg={4} xl={3} className="mb-5 col-8" key={MovieId}>
+                                                    <MovieCard
+                                                        movie={movie}
+                                                        removeFavmovie={removeFavmovie}
+                                                        addFavmovie={addFavmovie}
+                                                        isFavorite={user.FavoriteMovies.includes(movie._id)}
+                                                    />
+                                                </Col>
+                                            ))}
+                                    </>
+                                )}
+                            </>
+                        }
                     />
                     {/* display Profileview */}
                     <Route
-                    path="/profile"
-                    element={
-                        <>
-                            {!user ? (
-                                <Navigate to="/login" replace />
-                            ) : (
-                                <Col>
-                                    <ProfileView 
-                                    user={user}
-                                    movies={movies}
-                                    removeFavmovie={removeFavmovie}
-                                    addFavmovie={addFavmovie}
-                                    setUser={setUser}
-                                    />
-                                </Col>
-                            )}
-                        </>
-                    }
+                        path="/profile"
+                        element={
+                            <>
+                                {!user ? (
+                                    <Navigate to="/login" replace />
+                                ) : (
+                                    <Col>
+                                        <ProfileView
+                                            user={user}
+                                            movies={movies}
+                                            removeFavmovie={removeFavmovie}
+                                            addFavmovie={addFavmovie}
+                                            setUser={setUser}
+                                        />
+                                    </Col>
+                                )}
+                            </>
+                        }
                     />
                 </Routes>
             </Row>

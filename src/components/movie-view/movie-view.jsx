@@ -5,8 +5,7 @@ import { Col, Row } from "react-bootstrap";
 import { MovieCard } from "../movie-card/movie-card";
 import "./movie-view.scss"
 
-export const MovieView = ({ movies, removeFavmovie, addFavmovie}) => {
-
+export const MovieView = ({ movies, removeFavmovie, addFavmovie }) => {
     const { MovieId } = useParams();
     const movie = movies.find((movie) => movie._id === MovieId);
 
@@ -44,36 +43,36 @@ export const MovieView = ({ movies, removeFavmovie, addFavmovie}) => {
                     <div className="my-1">
                         <span className="h6">Genre: </span>
                         <span>{movie.Genre.Name}</span>
-                        </div>
+                    </div>
                     <div>
                         {user.FavoriteMovies.includes(movie._id) ? (
-                            <Button  variant="secondary" className="my-2 me-2" style={{ color: 'white' }} on onClick={() => removeFavmovie(movie._id)}>Remove from Favoritelist</Button>
+                            <Button variant="secondary" className="my-2 me-2" style={{ color: 'white' }} on onClick={() => removeFavmovie(movie._id)}>Remove from Favoritelist</Button>
                         ) : (
-                            <Button variant="secondary" className="my-2 me-2"  style={{ color: 'white' }} onClick={() => addFavmovie(movie._id)}>Add to Favoritelist</Button>
+                            <Button variant="secondary" className="my-2 me-2" style={{ color: 'white' }} onClick={() => addFavmovie(movie._id)}>Add to Favoritelist</Button>
                         )}
-                        </div>
+                    </div>
                     <Link to={`/`}>
-                        <Button  variant="secondary" className="my-2" style={{ color: 'white' }} >Back</Button>
+                        <Button variant="secondary" className="my-2" style={{ color: 'white' }} >Back</Button>
                     </Link>
                 </Col>
             </Row>
             <h2>Similar Movies</h2>
             <Row className="justify-content-center">
                 {
-                similarMovies.length !== 0 ?
-                similarMovies.slice(0,5).map((movie) => (
-                    <Col  sm={5} md={4} lg={3} xl={2} className="mx-2 my-3 col-6 similarmovies-img" key={movie._id}>
-                        <MovieCard
-                            movie={movie} 
-                            removeFavmovie={removeFavmovie} 
-                            addFavmovie={addFavmovie} 
-                            isFavorite={user.FavoriteMovies.includes(movie._id)}
-                        />
-                    </Col>
-                ))
-                : <Col>
-                <p>There are no similar Movies</p>
-                </Col>
+                    similarMovies.length !== 0 ?
+                        similarMovies.slice(0, 5).map((movie) => (
+                            <Col sm={5} md={4} lg={3} xl={2} className="mx-2 my-3 col-6 similarmovies-img" key={movie._id}>
+                                <MovieCard
+                                    movie={movie}
+                                    removeFavmovie={removeFavmovie}
+                                    addFavmovie={addFavmovie}
+                                    isFavorite={user.FavoriteMovies.includes(movie._id)}
+                                />
+                            </Col>
+                        ))
+                        : <Col>
+                            <p>There are no similar Movies</p>
+                        </Col>
                 }
             </Row>
         </>

@@ -1,28 +1,11 @@
-
-
-// $primary: blue;
-// $body-bg: white;
 $primary: rgba(12, 11, 12, 0.4);
-// $primary:rgba(82, 62, 154, 0.4);
-// $primary: rgb(79, 79, 184);
-// $body-bg: #f5eded;
-
 $body-bg: #0d0c0c;
 $body-color: white;
 $secondary: rgb(223, 27, 187);
 
 @import '~bootstrap/scss/bootstrap.scss';
 
-
-  
-  .no-padding-margin {
-    padding: 0;
-    margin: 0;
-  }
-  
-  // #root {
-  //   margin-top: 0;
-  // }
-  
-
-
+.no-padding-margin {
+  padding: 0;
+  margin: 0;
+}

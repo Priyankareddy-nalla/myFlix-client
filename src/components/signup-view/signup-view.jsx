@@ -45,7 +45,6 @@ export const SignupView = () => {
                         <Card>
                             <CardBody>
                                 <Card.Title>Create Account</Card.Title>
-
                                 <Form onSubmit={handleSubmit}>
                                     <Form.Group controlId="signupUsername">
                                         <Form.Label>Username:</Form.Label>
@@ -60,7 +59,6 @@ export const SignupView = () => {
                                     </Form.Group>
                                     <Form.Group controlId="signupPassword">
                                         <Form.Label>Password:</Form.Label>
-
                                         <Form.Control
                                             type="password"
                                             value={password}
@@ -71,7 +69,6 @@ export const SignupView = () => {
                                     </Form.Group>
                                     <Form.Group controlId="SigupEmail">
                                         <Form.Label> Email:</Form.Label>
-
                                         <Form.Control
                                             type="email"
                                             value={email}
@@ -80,19 +77,17 @@ export const SignupView = () => {
                                             placeholder="Enter valid email address"
                                         />
                                     </Form.Group>
-
                                     <Form.Group controlId="SigupBirthday">
                                         <Form.Label> Birthday:</Form.Label>
-
                                         <Form.Control
-                                            type="date"style={{ backgroundColor: '#d3bad32e', color: 'white' }}
+                                            type="date" style={{ backgroundColor: '#d3bad32e', color: 'white' }}
                                             value={birthday}
                                             onChange={(e) => setBirthday(e.target.value)}
                                             required
                                         />
                                     </Form.Group>
                                     <br></br>
-                                    <Button variant="secondary" style={{ color: "white"}} type="submit">Signup</Button>
+                                    <Button variant="secondary" style={{ color: "white" }} type="submit">Signup</Button>
                                 </Form>
                             </CardBody>
                         </Card>

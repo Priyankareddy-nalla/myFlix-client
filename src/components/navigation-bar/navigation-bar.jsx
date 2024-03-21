@@ -3,14 +3,14 @@ import { Navbar, Container, Nav, Form, FormControl, Button, Dropdown } from 'rea
 import { Link, useLocation } from 'react-router-dom';
 import "./navigation-bar.scss";
 
+
 export const NavigationBar = ({ user, onLoggedOut, setSearch, setSelectedGenre }) => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-
   return (
     <Navbar bg="primary" variant="dark" sticky="top" expand="lg">
       <Container>
-        <Navbar.Brand  style={{ fontSize: "30px",color: "rgb(223, 27, 187)"}} as={Link} to="/">
+        <Navbar.Brand style={{ fontSize: "30px", color: "rgb(223, 27, 187)" }} as={Link} to="/">
           MyFlix
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -18,22 +18,22 @@ export const NavigationBar = ({ user, onLoggedOut, setSearch, setSelectedGenre }
           <Nav className="me-auto">
             {!user ? (
               <>
-                <Nav.Link  style={{color: "white"}} as={Link}  to="/login">
+                <Nav.Link style={{ color: "white" }} as={Link} to="/login">
                   Login
                 </Nav.Link>
-                <Nav.Link style={{color: "white"}}  as={Link} to="/signup">
+                <Nav.Link style={{ color: "white" }} as={Link} to="/signup">
                   Signup
                 </Nav.Link>
               </>
             ) : (
               <>
-                <Nav.Link  style={{color: "white"}} as={Link} to="/">
+                <Nav.Link style={{ color: "white" }} as={Link} to="/">
                   Home
                 </Nav.Link>
-                <Nav.Link style={{color: "white"}}  as={Link} to="/profile">
+                <Nav.Link style={{ color: "white" }} as={Link} to="/profile">
                   Profile
                 </Nav.Link>
-                <Nav.Link  style={{color: "white"}} onClick={onLoggedOut}>Logout</Nav.Link>
+                <Nav.Link style={{ color: "white" }} onClick={onLoggedOut}>Logout</Nav.Link>
               </>
             )}
           </Nav>
@@ -61,7 +61,6 @@ export const NavigationBar = ({ user, onLoggedOut, setSearch, setSelectedGenre }
                   <Dropdown.Item onClick={() => setSelectedGenre('Drama')}>Drama</Dropdown.Item>
                   <Dropdown.Item onClick={() => setSelectedGenre('Chidrens film')}>Chidrens film</Dropdown.Item>
                   <Dropdown.Item onClick={() => setSelectedGenre('Sports')}>Sports</Dropdown.Item>
-
                 </Dropdown.Menu>
               </Dropdown>
             </Form>
