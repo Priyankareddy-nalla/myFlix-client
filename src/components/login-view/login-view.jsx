@@ -45,22 +45,20 @@ export const LoginView = ({ onLoggedIn }) => {
                     <CardGroup>
                         <Card>
                             <CardBody>
-                                <Card.Title>Login here</Card.Title>
+                                <Card.Title>Welcome to MyFlix</Card.Title>
                                 <Form onSubmit={handleSubmit}>
                                     <Form.Group controlId="formUsername">
                                         <Form.Label>Username:</Form.Label>
                                         <Form.Control type="text" value={username} onChange={(e) => setUsername(e.target.value)}
                                             required
-                                            placeholder="Please enter Username"
                                         /> </Form.Group>
                                     <Form.Group controlId="formPassword">
                                         <Form.Label>Password:</Form.Label>
                                         <Form.Control type="password" value={password} onChange={(e) => setPassword(e.target.value)}
                                             required
-                                            placeholder="Please enter Password"
                                         /></Form.Group>
                                     <br></br>
-                                    <Button type="submit">Login</Button>
+                                    <Button type="submit" variant="secondary" style={{ color: "white"}}>Login</Button>
                                 </Form>
                             </CardBody>
                         </Card>

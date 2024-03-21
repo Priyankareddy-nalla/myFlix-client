@@ -1,0 +1,24 @@
+// .card-shadow {
+//     box-shadow: 5px 5px 10px 5px rgba(207, 71, 224, 0.4);
+
+// }
+
+
+.card-img {
+    display: block;
+    width: 150px; 
+    height: 400px; 
+    object-fit: fill;
+}
+
+.fav-button {
+    cursor: pointer;
+    transition: 0.4s linear;
+    position: absolute;
+}
+
+.fav-button:hover {
+    transform: scale(1.4);
+}
+
+

@@ -17,5 +17,8 @@ existing server-side code (REST API and database).
 # Installations:
 * npm install -g parcel
 * npm install --save react react-dom
+* npm install react-router react-router-dom --save
 * npm install react-bootstrap bootstrap
+* npm install react-bootstrap-icons --save
+
 

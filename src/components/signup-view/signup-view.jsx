@@ -85,14 +85,14 @@ export const SignupView = () => {
                                         <Form.Label> Birthday:</Form.Label>
 
                                         <Form.Control
-                                            type="date"
+                                            type="date"style={{ backgroundColor: '#d3bad32e', color: 'white' }}
                                             value={birthday}
                                             onChange={(e) => setBirthday(e.target.value)}
                                             required
                                         />
                                     </Form.Group>
                                     <br></br>
-                                    <Button variant="primary" type="submit">Signup</Button>
+                                    <Button variant="secondary" style={{ color: "white"}} type="submit">Signup</Button>
                                 </Form>
                             </CardBody>
                         </Card>
