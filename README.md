@@ -20,5 +20,3 @@ existing server-side code (REST API and database).
 * npm install react-router react-router-dom --save
 * npm install react-bootstrap bootstrap
 * npm install react-bootstrap-icons --save
-* npm install react-bootstrap bootstrap
-
