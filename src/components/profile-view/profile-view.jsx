@@ -8,6 +8,7 @@ import { MovieCard } from "../movie-card/movie-card";
 
 export const ProfileView = ({ user, movies, setUser, removeFavmovie, addFavmovie }) => {
     const [username, setUsername] = useState(user.Username);
+    const [password, setPassword] = useState(user.Password);
     const [email, setEmail] = useState(user.Email);
     const [birthday, setBirthday] = useState(user.Birthday);
     // Navigate
@@ -25,6 +26,7 @@ export const ProfileView = ({ user, movies, setUser, removeFavmovie, addFavmovie
 
         const data = {
             Username: username,
+            Password: password,
             Email: email,
             Birthday: birthday
         }
@@ -98,6 +100,16 @@ export const ProfileView = ({ user, movies, setUser, removeFavmovie, addFavmovie
                                 minLength="5"
                             />
                         </Form.Group>
+                        <Form.Group controlId="updatePassword">
+                            <Form.Label>Password:</Form.Label>
+                            <Form.Control
+                                className="mb-3"
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </Form.Group>
+
                         <Form.Group controlId="updateEmail">
                             <Form.Label>Email:</Form.Label>
                             <Form.Control
