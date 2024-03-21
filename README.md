@@ -21,6 +21,7 @@ existing server-side code (REST API and database).
 * npm install react-bootstrap bootstrap
 * npm install react-bootstrap-icons --save
 * npm install --save-dev parcel@2.11.0
+* npm install -g parcel@2.11.0
 
 # Link to App
 
