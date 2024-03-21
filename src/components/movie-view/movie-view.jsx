@@ -4,10 +4,11 @@ import { Button } from "react-bootstrap";
 import { Col, Row } from "react-bootstrap";
 import { MovieCard } from "../movie-card/movie-card";
 import "./movie-view.scss"
-import { useEffect } from "react"; // Import useEffect hooks
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react"; // Import useEffect hook
 
-
-export const MovieView = ({ movies, removeFavmovie, addFavmovie }) => {
+export const MovieView = ({ removeFavmovie, addFavmovie }) => {
+    const movies = useSelector((state) => state.movies.list);
     const { MovieId } = useParams();
     const movie = movies.find((movie) => movie._id === MovieId);
 
@@ -16,13 +17,12 @@ export const MovieView = ({ movies, removeFavmovie, addFavmovie }) => {
         window.scrollTo(0, 0);
     });
 
+
     // Similar Movies
     const selectedMovie = movies.find((movie) => movie._id === MovieId);
     const similarMovies = movies.filter((movie) => {
         return movie._id !== MovieId && movie.Genre.Name === selectedMovie.Genre.Name;
     });
-
-
 
     // retrieve a user object from the browser's localStorage
     const user = JSON.parse(localStorage.getItem('user'));

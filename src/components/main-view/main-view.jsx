@@ -9,15 +9,23 @@ import "./main-view.scss";
 import { Row } from "react-bootstrap";
 import { Col, Form, Button } from "react-bootstrap";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { MoviesList } from "../movies-list/movies-list";
+import { setMovies } from "../../redux/reducers/movies";
+import { useSelector, useDispatch } from "react-redux";
+
 
 export const MainView = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     const storedToken = localStorage.getItem("token");
     const [user, setUser] = useState(storedUser ? storedUser : null);
     const [token, setToken] = useState(storedToken ? storedToken : null);
-    const [movies, setMovies] = useState([]);
+    const movies = useSelector((state) => state.movies.list);
+
+    // const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState("");
     const [selectedGenre, setSelectedGenre] = useState("");
+    const dispatch = useDispatch();
+
 
     // Connect App to API with Hook
     useEffect(() => {
@@ -46,7 +54,7 @@ export const MainView = () => {
                         }
                     };
                 });
-                setMovies(moviesFromApi);
+                dispatch(setMovies(moviesFromApi));
             });
     }, [token]);
 
@@ -68,6 +76,7 @@ export const MainView = () => {
             if (user) {
                 localStorage.setItem('user', JSON.stringify(user));
                 setUser(user);
+                //setIsFavorite(true);
             }
         }).catch(error => {
             console.error('Error: ', error);
@@ -172,6 +181,17 @@ export const MainView = () => {
                             </>
                         }
                     />
+
+                    {/* after applying redux */}
+                    <Route
+                        path="/"
+                        element={
+                            <>{!user ? <Navigate to="/login" replace /> :
+                                <MoviesList />}</>
+                        }
+                    />
+
+
                     {/* display movicard for logged in users*/}
                     <Route
                         path="/"
@@ -183,6 +203,7 @@ export const MainView = () => {
                                     <Col>The list is empty</Col>
                                 ) : (
                                     <>
+
                                         {movies.filter((movie) => {
                                             return selectedGenre === ""
                                                 ? movie

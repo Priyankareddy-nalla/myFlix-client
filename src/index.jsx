@@ -2,14 +2,19 @@ import { createRoot } from 'react-dom/client';
 import { MainView } from "./components/main-view/main-view";
 import { Container } from 'react-bootstrap';
 import "./index.scss";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
+
 
 
 // Main component (will eventually use all the others)
 const MyFlixApplication = () => {
   return (
-    <Container fluid className="no-padding-margin" > {/* Apply custom class */}
-      <MainView />
-    </Container>
+    <Provider store={store}>
+      <Container fluid className="no-padding-margin" > {/* Apply custom class */}
+        <MainView />
+      </Container>
+    </Provider>
   )
 };
 
