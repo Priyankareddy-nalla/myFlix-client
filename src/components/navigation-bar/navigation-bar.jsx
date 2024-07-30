@@ -59,7 +59,7 @@ export const NavigationBar = ({ user, onLoggedOut, setSearch, setSelectedGenre }
                   <Dropdown.Item onClick={() => setSelectedGenre('Animated')}>Animated</Dropdown.Item>
                   <Dropdown.Item onClick={() => setSelectedGenre('Action')}>Action</Dropdown.Item>
                   <Dropdown.Item onClick={() => setSelectedGenre('Drama')}>Drama</Dropdown.Item>
-                  <Dropdown.Item onClick={() => setSelectedGenre('Chidrens film')}>Chidrens film</Dropdown.Item>
+                  <Dropdown.Item onClick={() => setSelectedGenre('Chidrens film')}>Chidrens Film</Dropdown.Item>
                   <Dropdown.Item onClick={() => setSelectedGenre('Sports')}>Sports</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
