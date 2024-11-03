@@ -51,7 +51,8 @@ To deregister or delete your user account from MyFlix, follow these steps:
 3. In the profile, look for an button labeled "Delete User". Click on this option to proceed.
 5. Once clicked, your account and all associated data will be permanently deleted from MyFlix. 
 
-
+# To run locally
+parcel src/index.html
 
 
 

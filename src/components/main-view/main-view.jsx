@@ -10,6 +10,7 @@ import { Row } from "react-bootstrap";
 import { Col, Form, Button } from "react-bootstrap";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+
 export const MainView = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     const storedToken = localStorage.getItem("token");
@@ -229,7 +230,25 @@ export const MainView = () => {
                             </>
                         }
                     />
+                    {/* to upload image AWS  */}
+                    {/* <Route path="/imageUpload"
+                        element={
+                            <>{!user ? (
+                                <Navigate to="/imageUpload" replace />
+                            ) : (
+                                <Col>
+                                    <ImageUploader
+                                    />
+                                </Col>
+                            )}
+                            </>
+                        }
+                    /> */}
+
                 </Routes>
+
+
+
             </Row>
         </BrowserRouter>
     );
