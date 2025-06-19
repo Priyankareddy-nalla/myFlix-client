@@ -44,7 +44,8 @@ export const MainView = () => {
                         },
                         Director: {
                             Name: movie.Director.Name
-                        }
+                        },
+                        Actors: movie.Actors 
                     };
                 });
                 setMovies(moviesFromApi);
