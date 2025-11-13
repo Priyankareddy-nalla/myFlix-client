@@ -52219,7 +52219,7 @@ const ProfileView = ({ user, movies, setUser, removeFavmovie, addFavmovie })=>{
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Text, {
                                         children: [
                                             "Birthday: ",
-                                            new Date(user.Birthday).toLocaleDateString()
+                                            user.Birthday
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/profile-view/profile-view.jsx",
@@ -52485,4 +52485,4 @@ $RefreshReg$(_c, "ProfileView");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","react-bootstrap":"3AD9A","../movie-card/movie-card":"bwuIu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eBaMl":[function() {},{}],"lJZlQ":[function() {},{}]},["1xC6H","5qIsR","d8Dch"], "d8Dch", "parcelRequire94c2")
 
-//# sourceMappingURL=index.b4b6dfad.js.map
+//# sourceMappingURL=index.js.map

@@ -83,7 +83,7 @@ export const ProfileView = ({ user, movies, setUser, removeFavmovie, addFavmovie
                             <Card.Title>My Profile</Card.Title>
                             <Card.Text>Username:{user.Username}</Card.Text>
                             <Card.Text>Email: {user.Email}</Card.Text>
-                            <Card.Text>Birthday: {user.Birthday}</Card.Text>
+                            <Card.Text>Birthday: {new Date(user.Birthday).toLocaleDateString()}</Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
