@@ -18,9 +18,11 @@ export const MovieView = ({ movies, removeFavmovie, addFavmovie }) => {
 
     // Similar Movies
     const selectedMovie = movies.find((movie) => movie._id === MovieId);
+    console.log(`thisis${movie.Actors}`);
     const similarMovies = movies.filter((movie) => {
         return movie._id !== MovieId && movie.Genre.Name === selectedMovie.Genre.Name;
     });
+
 
 
 
@@ -53,10 +55,23 @@ export const MovieView = ({ movies, removeFavmovie, addFavmovie }) => {
                         <span className="h6">Genre: </span>
                         <span>{movie.Genre.Name}</span>
                     </div>
+
+              {/* displaying actors names  */}
                     <div className="my-1">
                         <span className="h6">Actors: </span>
-                        <span>{movie.Actors}</span>
+                        {movie.Actors?.length > 0 ? (
+                            movie.Actors.map((name, index) => (
+                                <span key={index} className="mx-1">
+                                    {name}
+                                    {index < movie.Actors.length - 1 ? ", " : ""}
+                                </span>
+                            ))
+                        ) : (
+                            <span>No actors available</span>
+                        )}
                     </div>
+
+
 
                     <div>
                         {user.FavoriteMovies.includes(movie._id) ? (

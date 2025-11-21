@@ -45,7 +45,8 @@ export const MainView = () => {
                         Director: {
                             Name: movie.Director.Name
                         },
-                        Actors: movie.Actors 
+                        Actors: movie.actors ? movie.actors.map(actor => actor.name) : []
+
                     };
                 });
                 setMovies(moviesFromApi);
