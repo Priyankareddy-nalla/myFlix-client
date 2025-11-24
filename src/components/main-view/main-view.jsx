@@ -5,6 +5,7 @@ import { LoginView } from "../login-view/login-view.jsx";
 import { SignupView } from "../signup-view/signup-view.jsx";
 import { NavigationBar } from "../navigation-bar/navigation-bar.jsx";
 import { ProfileView } from "../profile-view/profile-view.jsx";
+import { ActorView } from "../actor-view/actor-view";
 import "./main-view.scss";
 import { Row } from "react-bootstrap";
 import { Col, Form, Button } from "react-bootstrap";
@@ -45,8 +46,15 @@ export const MainView = () => {
                         Director: {
                             Name: movie.Director.Name
                         },
-                        Actors: movie.actors ? movie.actors.map(actor => actor.name) : []
-
+                        Actors: movie.actors
+                            ? movie.actors.map(actor => ({
+                                _id: actor._id,
+                                name: actor.name,
+                                ImagePath: actor.image,
+                                Bio: actor.bio,
+                                Dob: actor.dob
+                            }))
+                            : []
                     };
                 });
                 setMovies(moviesFromApi);
@@ -246,6 +254,13 @@ export const MainView = () => {
                             </>
                         }
                     /> */}
+
+
+                    <Route
+                        path="/actors/:actorId"
+                        element={<ActorView movies={movies} />}
+                    />
+
 
                 </Routes>
 

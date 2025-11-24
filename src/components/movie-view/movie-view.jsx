@@ -25,12 +25,11 @@ export const MovieView = ({ movies, removeFavmovie, addFavmovie }) => {
 
 
 
-
     // retrieve a user object from the browser's localStorage
     const user = JSON.parse(localStorage.getItem('user'));
 
     // display user
-    console.log(user);
+    // console.log(user);
 
 
     return (
@@ -56,13 +55,16 @@ export const MovieView = ({ movies, removeFavmovie, addFavmovie }) => {
                         <span>{movie.Genre.Name}</span>
                     </div>
 
-              {/* displaying actors names  */}
+                    {/* displaying actors names  */}
                     <div className="my-1">
                         <span className="h6">Actors: </span>
+
                         {movie.Actors?.length > 0 ? (
-                            movie.Actors.map((name, index) => (
-                                <span key={index} className="mx-1">
-                                    {name}
+                            movie.Actors.map((actor, index) => (
+                                <span key={actor._id} className="mx-1">
+                                    <Link to={`/actors/${actor._id}`} style={{ color: 'white' }}>
+                                        {actor.name}
+                                    </Link>
                                     {index < movie.Actors.length - 1 ? ", " : ""}
                                 </span>
                             ))
