@@ -31,8 +31,10 @@ https://myfirstappmovie.netlify.app
 To access information about movies, follow these steps:
 1. Navigate to the homepage of the MyFlix app.
 2. Browse through the list of available movies.
-3. Click on a movie to view more details such as title, genre,description and Director.
-4. Use the search functionality to find specific movies by title and genre criteria.
+3. Click on a movie to view more details such as title, genre,description,director and actors.
+4. Actor links shows actor information.
+5. Use the search functionality to find specific movies by title and genre criteria.
+
 
 # Creating a Profile
 To create a profile and save data about your favorite movies, follow these steps:
